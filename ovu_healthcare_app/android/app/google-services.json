@@ -1,0 +1,67 @@
+{
+  "project_info": {
+    "project_number": "1033030216210",
+    "project_id": "ovu-healthcare-app",
+    "storage_bucket": "ovu-healthcare-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1033030216210:android:e18a8376f29c5a185386cb",
+        "android_client_info": {
+          "package_name": "com.example.demo"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyClBOhF2vUTp2WIIFDPhuY0pF0jpsnUQ34"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1033030216210:android:a6cf348df4def8165386cb",
+        "android_client_info": {
+          "package_name": "com.example.healthcare_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyClBOhF2vUTp2WIIFDPhuY0pF0jpsnUQ34"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1033030216210:android:0f5da1f4e2a883265386cb",
+        "android_client_info": {
+          "package_name": "com.example.ovu_healthcare_app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyClBOhF2vUTp2WIIFDPhuY0pF0jpsnUQ34"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
