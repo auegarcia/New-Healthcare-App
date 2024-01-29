@@ -1,32 +1,37 @@
-// ignore_for_file: unnecessary_new, prefer_const_constructors, file_names
+// ignore_for_file: unnecessary_new, prefer_const_constructors, file_names, use_build_context_synchronously, use_key_in_widget_constructors
 
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:ovu_healthcare_app/constants/auth_serveice.dart';
 
 
  class LoginPage extends StatefulWidget{
   @override
   State createState() => new LoginPageState();
+
 }
 
 class LoginPageState extends State <LoginPage> with SingleTickerProviderStateMixin{
 
-  late AnimationController _iconAnimationController;
-  late Animation <double> _iconAnimation;
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _pwController = TextEditingController();
 
-  @override
-  void initState() {
-    super.initState();
-    _iconAnimationController = new AnimationController(
-      vsync: this,
-      duration: new Duration(milliseconds: 500)
-    );
-    _iconAnimation = new CurvedAnimation(
-      parent: _iconAnimationController,
-      curve: Curves.bounceOut
-    );
-    _iconAnimation.addListener(() =>  this.setState((){}));
-    _iconAnimationController.forward();
+  void login(BuildContext context) async {
+
+    final authService = AuthService();
+
+    try {
+      await authService.signInWithEmailPassword(_emailController.text, _pwController.text,);
+    }
+
+    catch (e) {
+      showDialog(context: context, builder: (context) => AlertDialog(
+        title: Text(e.toString()),
+      ),
+      );
+    }
+
+
   }
   
   @override
@@ -98,9 +103,7 @@ class LoginPageState extends State <LoginPage> with SingleTickerProviderStateMix
                                   color: Color.fromARGB(255, 248, 158, 218),
                                   textColor:Color.fromARGB(255, 255, 255, 255),
                                   child: new Text("Login"),
-                                  onPressed: () {
-                                    GoRouter.of(context).go('/home');
-                                  },
+                                  onPressed: () => login(context),
                                   splashColor: Colors.deepPurpleAccent,
                                 ),
                                 new MaterialButton(
