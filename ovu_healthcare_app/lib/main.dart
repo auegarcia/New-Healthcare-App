@@ -9,10 +9,13 @@ import 'package:ovu_healthcare_app/pages/Home_page.dart';
 import 'package:ovu_healthcare_app/pages/Login_page.dart';
 import 'package:ovu_healthcare_app/pages/Meds_page.dart';
 import 'package:ovu_healthcare_app/pages/Register_page.dart';
+import 'package:firebase_core/firebase_core.dart';
+import 'firebase_options.dart';
 
 
 
-void main(){
+void main() async{
+  await Firebase.initializeApp(options: DefaultFirebaseOptions.currentPlatform,);
   runApp(new MyApp());
 }
 
