@@ -30,8 +30,6 @@ class LoginPageState extends State <LoginPage> with SingleTickerProviderStateMix
       ),
       );
     }
-
-
   }
   
   @override
