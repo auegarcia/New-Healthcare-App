@@ -2,7 +2,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
-import 'package:ovu_healthcare_app/constants/auth_serveice.dart';
+import 'package:ovu_healthcare_app/constants/auth_service.dart';
 
 
  class LoginPage extends StatefulWidget{
@@ -67,6 +67,7 @@ class LoginPageState extends State <LoginPage> with SingleTickerProviderStateMix
                       children: <Widget> [
 
                             TextField(
+                              controller: _emailController,
                               decoration: InputDecoration(
                                 hintText: "Email",
                                 border: OutlineInputBorder(
@@ -80,6 +81,7 @@ class LoginPageState extends State <LoginPage> with SingleTickerProviderStateMix
 
                         const SizedBox(height: 20),
                               TextField(
+                                controller: _pwController,
                                 decoration: InputDecoration(
                                   hintText: "Password",
                                   border: OutlineInputBorder(
