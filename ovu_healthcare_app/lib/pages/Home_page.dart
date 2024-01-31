@@ -2,6 +2,7 @@
 
 
 import 'package:flutter/material.dart';
+import 'package:ovu_healthcare_app/constants/auth_service.dart';
 import 'package:ovu_healthcare_app/constants/navbar.dart';
 
 
@@ -14,8 +15,9 @@ const HomePage({Key? key}) : super(key: key);
 }
 
 class _HomePageState extends State<HomePage> {
+  final authService = AuthService();
 
-@override
+  @override
   Widget build(BuildContext context){
     return Scaffold(
         appBar: AppBar(
@@ -23,7 +25,8 @@ class _HomePageState extends State<HomePage> {
           centerTitle: true,
           elevation: 0,
           actions: [IconButton(onPressed: () {
-            Navigator.pop(context);
+            // Navigator.pop(context);
+            authService.logout();
           }, 
           icon: Icon(Icons.logout))],
           ),

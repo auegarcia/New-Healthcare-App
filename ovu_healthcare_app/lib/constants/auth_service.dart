@@ -10,8 +10,14 @@ Future<UserCredential> signInWithEmailPassword (String email, password) async {
   } on FirebaseAuthException catch (e){
     throw Exception(e.code);
   }
+}
 
-
+Future<void> logout() async {
+  try {
+    return _auth.signOut();
+  } on FirebaseAuthException catch (e){
+    throw Exception(e.code);
+  }
 }
 
 }
