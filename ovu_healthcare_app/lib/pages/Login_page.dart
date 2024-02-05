@@ -3,6 +3,7 @@
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:ovu_healthcare_app/constants/auth_service.dart';
+import 'package:ovu_healthcare_app/pages/Register_page.dart';
 
 
  class LoginPage extends StatefulWidget{
@@ -113,7 +114,8 @@ class LoginPageState extends State <LoginPage> with SingleTickerProviderStateMix
                                   textColor:Color.fromARGB(255, 255, 255, 255),
                                   child: new Text("Register"),
                                   onPressed: () {
-                                      GoRouter.of(context).go('/register');
+                                    Navigator.push(context, MaterialPageRoute(builder: (context) => Register()),
+                                    );
                                   },
                                   splashColor: Colors.deepPurpleAccent,
                                 ),

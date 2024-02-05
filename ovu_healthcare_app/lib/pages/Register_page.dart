@@ -2,11 +2,25 @@
 
 import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
+import 'package:ovu_healthcare_app/constants/auth_service.dart';
 
 
 
 class Register extends StatelessWidget{
-  const Register ({super.key});
+   Register ({super.key});
+
+
+  final TextEditingController _emailController = TextEditingController();
+  final TextEditingController _pwController = TextEditingController();
+  final TextEditingController _numberController = TextEditingController();
+
+//register 
+  void register (BuildContext context) {
+
+      final _auth = AuthService ();
+  }
+
+
 
     @override
       Widget build(BuildContext context) {
@@ -44,9 +58,13 @@ class Register extends StatelessWidget{
                           ],
                         ),
                         
+
                         Column(
                           children: <Widget> [
+
+                          // Email Textfield 
                             TextField(
+                              controller: _emailController,
                               decoration: InputDecoration(
                                 hintText: "Email",
                                 border: OutlineInputBorder(
@@ -58,8 +76,10 @@ class Register extends StatelessWidget{
                                 ),
                               ),
                       
+                          // Password Textfield
                         const SizedBox(height: 20),
                               TextField(
+                                controller: _pwController,
                                 decoration: InputDecoration(
                                   hintText: "Password",
                                   border: OutlineInputBorder(
@@ -72,8 +92,11 @@ class Register extends StatelessWidget{
                                 obscureText: true,
                               ),
 
+
+                          // Mobile Number Textfield
                         const SizedBox(height: 20),
                               TextField(
+                                controller: _numberController,
                                 decoration: InputDecoration(
                                   hintText: "Mobile Number",
                                   border: OutlineInputBorder(
@@ -89,7 +112,7 @@ class Register extends StatelessWidget{
                           padding: const EdgeInsets.only(top: 50, left: 5),
 
                             child: ElevatedButton(
-                              onPressed: () {},
+                              onPressed: () => register(context),
                                 child: const Text('Sign up'),
                             ),
                         ),
