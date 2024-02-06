@@ -25,7 +25,6 @@ class _HomePageState extends State<HomePage> {
           centerTitle: true,
           elevation: 0,
           actions: [IconButton(onPressed: () {
-            // Navigator.pop(context);
             authService.logout();
           }, 
           icon: Icon(Icons.logout))],

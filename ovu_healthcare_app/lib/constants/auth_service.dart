@@ -30,8 +30,6 @@ Future<UserCredential> signUpWithEmailPassword (String email, password) async {
 
 }
 
-
-
 // sign out 
 Future<void> logout() async {
   try {

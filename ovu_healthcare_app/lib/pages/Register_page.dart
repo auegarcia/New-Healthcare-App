@@ -16,8 +16,13 @@ class Register extends StatelessWidget{
 
 //register 
   void register (BuildContext context) {
-
       final _auth = AuthService ();
+
+     _auth.signUpWithEmailPassword(
+      _emailController.text,
+      _pwController.text,
+
+     ) ;
   }
 
 
