@@ -120,6 +120,9 @@ class Register extends StatelessWidget{
                               onPressed: () => register(context),
                                 child: const Text('Sign up'),
                             ),
+
+                            
+
                         ),
                       ],
                     ),
