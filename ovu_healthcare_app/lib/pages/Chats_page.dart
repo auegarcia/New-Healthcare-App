@@ -1,6 +1,7 @@
 // ignore_for_file: no_logic_in_create_state, prefer_const_literals_to_create_immutables, prefer_const_constructors
 
 import 'package:flutter/material.dart';
+import 'package:ovu_healthcare_app/constants/navbar.dart';
 
 class ChatsPage extends StatefulWidget {
   const ChatsPage({super.key});
@@ -24,7 +25,7 @@ class _ChatsScreenState extends State<ChatsPage> {
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: <Widget>[
-                    Text("Conversations",style: TextStyle(fontSize: 32,fontWeight: FontWeight.bold),),
+                    Text("Chats",style: TextStyle(fontSize: 32,fontWeight: FontWeight.bold),),
                     Container(
                       padding: EdgeInsets.only(left: 8,right: 8,top: 2,bottom: 2),
                       height: 30,
@@ -47,6 +48,13 @@ class _ChatsScreenState extends State<ChatsPage> {
           ],
         ),
       ),
+
+
+
+
+
+      
+      bottomNavigationBar: CustomFABBottomeAppBar(),
     );
   }
 }
